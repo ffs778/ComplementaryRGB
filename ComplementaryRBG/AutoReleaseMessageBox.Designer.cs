@@ -1,5 +1,5 @@
 ﻿
-namespace WinFormsApp1
+namespace ComplementaryRGB
 {
     partial class AutoReleaseMessageBox
     {
