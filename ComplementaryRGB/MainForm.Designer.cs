@@ -29,6 +29,7 @@ namespace ComplementaryRGB
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,11 +52,12 @@ namespace ComplementaryRGB
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1180, 756);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1517, 889);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -63,9 +65,10 @@ namespace ComplementaryRGB
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(4, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1174, 83);
+            this.label1.Size = new System.Drawing.Size(1509, 98);
             this.label1.TabIndex = 0;
             this.label1.Text = "RGB互补色计算与显示";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -80,20 +83,22 @@ namespace ComplementaryRGB
             this.tableLayoutPanel2.Controls.Add(this.originRGB_lab, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.origin_picb, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 86);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 102);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1174, 667);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1509, 783);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // complementary_picb
             // 
             this.complementary_picb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.complementary_picb.Location = new System.Drawing.Point(590, 114);
+            this.complementary_picb.Location = new System.Drawing.Point(758, 134);
+            this.complementary_picb.Margin = new System.Windows.Forms.Padding(4);
             this.complementary_picb.Name = "complementary_picb";
-            this.complementary_picb.Size = new System.Drawing.Size(581, 550);
+            this.complementary_picb.Size = new System.Drawing.Size(747, 645);
             this.complementary_picb.TabIndex = 3;
             this.complementary_picb.TabStop = false;
             // 
@@ -101,10 +106,11 @@ namespace ComplementaryRGB
             // 
             this.complementaryRGB_lab.AutoSize = true;
             this.complementaryRGB_lab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.complementaryRGB_lab.Font = new System.Drawing.Font("幼圆", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.complementaryRGB_lab.Location = new System.Drawing.Point(590, 0);
+            this.complementaryRGB_lab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.complementaryRGB_lab.Location = new System.Drawing.Point(758, 0);
+            this.complementaryRGB_lab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.complementaryRGB_lab.Name = "complementaryRGB_lab";
-            this.complementaryRGB_lab.Size = new System.Drawing.Size(581, 111);
+            this.complementaryRGB_lab.Size = new System.Drawing.Size(747, 130);
             this.complementaryRGB_lab.TabIndex = 1;
             this.complementaryRGB_lab.Text = "0,0,0";
             this.complementaryRGB_lab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,32 +120,38 @@ namespace ComplementaryRGB
             // 
             this.originRGB_lab.AutoSize = true;
             this.originRGB_lab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.originRGB_lab.Font = new System.Drawing.Font("幼圆", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.originRGB_lab.Location = new System.Drawing.Point(3, 0);
+            this.originRGB_lab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.originRGB_lab.Location = new System.Drawing.Point(4, 0);
+            this.originRGB_lab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.originRGB_lab.Name = "originRGB_lab";
-            this.originRGB_lab.Size = new System.Drawing.Size(581, 111);
+            this.originRGB_lab.Size = new System.Drawing.Size(746, 130);
             this.originRGB_lab.TabIndex = 0;
             this.originRGB_lab.Text = "0,0,0";
             this.originRGB_lab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.originRGB_lab.TextChanged += new System.EventHandler(this.originRGB_lab_TextChanged);
             this.originRGB_lab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.originRGB_lab_MouseClick);
             // 
             // origin_picb
             // 
             this.origin_picb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.origin_picb.Location = new System.Drawing.Point(3, 114);
+            this.origin_picb.Location = new System.Drawing.Point(4, 134);
+            this.origin_picb.Margin = new System.Windows.Forms.Padding(4);
             this.origin_picb.Name = "origin_picb";
-            this.origin_picb.Size = new System.Drawing.Size(581, 550);
+            this.origin_picb.Size = new System.Drawing.Size(746, 645);
             this.origin_picb.TabIndex = 2;
             this.origin_picb.TabStop = false;
+            this.origin_picb.BackColorChanged += new System.EventHandler(this.origin_picb_BackColorChanged);
             this.origin_picb.Click += new System.EventHandler(this.origin_picb_Click);
             // 
-            // Form1
+            // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 756);
+            this.ClientSize = new System.Drawing.Size(1517, 889);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "MainForm";
             this.Text = "互补色工具";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -6,34 +7,26 @@ namespace ComplementaryRGB
 {
     public static class ControlEx
     {
-        public static void BindMouseClick(this Control control, MouseEventArgs e)
+        /// <summary>
+        /// 弹出自动关闭的弹窗。
+        /// </summary>
+        /// <param name="parent"></param>
+        /// <param name="message"></param>
+        public static void ShowMessage(Control parent, string message)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                SetRGB(control.Text);
-            }
-            if (e.Button == MouseButtons.Right)
-            {
-                control.Text = GetRGB();
-            }
-        }
-        private static void SetRGB(string text)
-        {
-            Clipboard.SetText(text);
-            ShowMessage("已复制");
-        }
-        private static string GetRGB()
-        {
-            return Clipboard.GetText();
-        }
-        private static void ShowMessage(string message)
-        {
-            var taskShowBox = Task.Run(() =>
+            Task.Run(() =>
             {
                 var box = new AutoReleaseMessageBox(message);
-                box.Show();
-                Thread.Sleep(3000);   // 3秒后自动关闭窗口
-                box.Close();
+                parent.Invoke(new Action(() =>
+                {
+                    box.Show(); // 直接show会导致显示不全。
+                }));
+                Thread.Sleep(1000); // 等待1s后自动关闭
+                parent.Invoke(new Action(() =>
+                {
+                    box.Close();
+                    box.Dispose();
+                }));
             });
         }
     }
